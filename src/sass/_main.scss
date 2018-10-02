@@ -1,0 +1,24 @@
+@import 'utils';
+@import 'header';
+@import 'footer';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family;
+
+    >div {
+        display: flex;
+        flex-direction: column;
+
+        >*:nth-child(2) {
+            min-height: calc(100vh - #{$header-height});
+        }
+    }
+}
+
+a {
+    cursor: pointer;
+}
