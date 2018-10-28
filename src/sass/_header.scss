@@ -41,15 +41,14 @@ $header-height: 54px;
             margin: 5px 0;
             line-height: 100%;
 
-            >img {
-                $size: $header-height - 1px - 5px * 2;
-                width: $size;
-                height: $size;
+            >.logo-emblem {
                 margin-right: 10px;
             }
 
-            >span {
-                font-size: 1.5em;
+            >.logo-text {
+                position: relative;
+                top: 2px;
+                fill: rgba(black, 0.8);
             }
         }
 
