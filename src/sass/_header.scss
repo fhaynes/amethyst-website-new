@@ -1,6 +1,7 @@
 @import 'utils';
+@import 'colors';
 
-$header-height: 54px;
+$header-height: 3rem;
 
 // HACK: Used to fix initial state for the navigation
 @keyframes transition-fix {
@@ -13,9 +14,9 @@ $header-height: 54px;
     display: flex;
     justify-content: center;
     width: 100%;
-    height: $header-height - 1px;
-    border-bottom: 1px solid rgba(black, 0.05);
-    background: rgba(white, 0.95);
+    height: $header-height;
+    border-bottom: 1px solid rgba($dark, 0.05);
+    background: rgba($light, 0.95);
     z-index: 10000;
     @include vendor-prefix(user-select, none);
 
@@ -23,12 +24,12 @@ $header-height: 54px;
         display: flex;
         align-items: center;
         position: relative;
-        max-width: 1040px;
+        max-width: 60rem;
         width: 100%;
-        margin: 0 20px;
+        margin: 0 1rem;
 
         a {
-            color: rgba(black, 0.9);
+            color: rgba($dark, 0.9);
             text-decoration: none;
         }
 
@@ -47,8 +48,8 @@ $header-height: 54px;
 
             >.logo-text {
                 position: relative;
-                top: 2px;
-                fill: rgba(black, 0.8);
+                top: 1px;
+                fill: rgba($dark, 0.8);
             }
         }
 
@@ -65,7 +66,6 @@ $header-height: 54px;
 @media screen and (min-width: $mobile-interface-thresold - 1) {
     .master-header {
         position: fixed;
-        height: $header-height - 1px;
 
         >div {
             .hamburger {
@@ -74,7 +74,7 @@ $header-height: 54px;
 
             >nav {
                 >*:not(:last-child) {
-                    margin-right: 20px;
+                    margin-right: 1rem;
                 }
             }
         }
@@ -101,12 +101,14 @@ $header-height: 54px;
         pointer-events: none;
 
         >a {
-            padding: 12px 0;
+            padding: 1rem 2rem;
             width: 100%;
+            // HACK: Since there isn't a container element below these with the background,
+            // you can sometimes get artifacts between the elements without this.
             margin: -1px 0;
             z-index: 1;
-            background: white;
-            text-align: center;
+            background: $light;
+            // text-align: center;
 
             &:first-child {
                 padding-top: 20px;

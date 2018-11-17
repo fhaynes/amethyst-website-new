@@ -1,34 +1,53 @@
+@import 'general';
+@import 'colors';
+@import 'typography';
+@import 'responsive';
+
 #content {
+    overflow-x: hidden;
+
     >div {
         width: 100%;
-        min-height: 300px;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        line-height: 2em;
+        padding: 0 2rem;
 
         > * {
-            max-width: 500px;
-            padding: 80px 20px;
+            max-width: 60rem;
+            padding: 4rem 0;
             width: 100%;
-            box-sizing: border-box;
         }
 
         &:nth-child(even) {
-            background: #f7f8fb;
+            background: $alternative-light;
         }
     }
 }
 
-.page-title {
-    font-size: 40px;
-    text-align: center;
-    line-height: 1.3em;
+#content > div.page-title {
+    padding: 8rem 2rem;
 
-    .subtitle {
-        margin-top: 35px;
-        font-size: 20px;
-        line-height: 1.8em;
+    > div {
+        padding: 0;
+    }
+
+    *:first-child {
+        margin: 0;
+    }
+
+    *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@include mobile() {
+    #content > div.page-title {
+        text-align: center;
+    }
+
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .subtitle {
+        text-align: center;
     }
 }
