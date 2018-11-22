@@ -1,43 +1,42 @@
-@import 'main';
 @import 'standard-layout.scss';
 
-#content {
-    >div > * {
-        text-align: center;
+// #content {
+//     >div > * {
+//         text-align: center;
 
-        &:not(:last-child) {
-            margin-bottom: 15px;
-        }
+//         &:not(:last-child) {
+//             margin-bottom: 15px;
+//         }
 
-        .title {
-            font-size: 2em;
-            display: block;
-            margin-bottom: 25px;
-        }
+//         .title {
+//             font-size: 2em;
+//             display: block;
+//             margin-bottom: 25px;
+//         }
 
-        a {
-            text-decoration: none;
-            color: $primary-color;
+//         a {
+//             text-decoration: none;
+//             color: $primary-color;
 
-            &:hover {
-                text-decoration: underline;
-                color: $secondary-color;
-            }
-        }
+//             &:hover {
+//                 text-decoration: underline;
+//                 color: $secondary-color;
+//             }
+//         }
 
-        ul {
-            padding: 0;
-            list-style: none;
-            margin-top: 30px;
-            margin-bottom: 0;
+//         ul {
+//             padding: 0;
+//             list-style: none;
+//             margin-top: 30px;
+//             margin-bottom: 0;
 
-            li:not(:last-child) {
-                margin-bottom: 15px;
-            }
-        }
-    }
-}
+//             li:not(:last-child) {
+//                 margin-bottom: 15px;
+//             }
+//         }
+//     }
+// }
 
-#latest {
-    font-size: 18px;
-}
+// #latest {
+//     font-size: 18px;
+// }

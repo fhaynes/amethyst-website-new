@@ -1,5 +1,6 @@
-@import 'utils';
 @import 'colors';
+@import 'vendor';
+@import 'responsive';
 
 $header-height: 3rem;
 
@@ -11,6 +12,7 @@ $header-height: 3rem;
 }
 
 .master-header {
+    position: fixed;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -23,6 +25,7 @@ $header-height: 3rem;
     >div {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         position: relative;
         max-width: 60rem;
         width: 100%;
@@ -54,40 +57,36 @@ $header-height: 3rem;
         }
 
         >.hamburger {
-            display: block;
+            display: none;
             width: $header-height / 2;
             height: $header-height / 2;
             background-image: url("/assets/hamburger.svg");
             background-size: contain;
-        }
-    }
-}
 
-@media screen and (min-width: $mobile-interface-thresold - 1) {
-    .master-header {
-        position: fixed;
-
-        >div {
-            .hamburger {
-                display: none;
+            @include mobile() {
+                display: block;
             }
+        }
 
-            >nav {
-                >*:not(:last-child) {
-                    margin-right: 1rem;
+        >nav {
+            >*:not(:last-child) {
+                margin-right: 1rem;
+
+                @include mobile() {
+                    margin-right: 0;
                 }
             }
         }
     }
-
-    body > div > div:nth-child(2):before {
-        display: block;
-        content: "";
-        height: $header-height;
-    }
 }
 
-@media screen and (max-width: $mobile-interface-thresold) {
+body > div > div:nth-child(2):before {
+    display: block;
+    content: "";
+    height: $header-height;
+}
+
+@include mobile {
     .master-header > div > nav {
         position: fixed;
         top: 0; right: 0; left: 0;
@@ -126,7 +125,7 @@ $header-height: 3rem;
             width: 100vw;
             height: 200vh;
             z-index: 0;
-            background: rgba($secondary-color, 0.8);
+            background: rgba($dark, 0.8);
             opacity: 0;
             transition: opacity 0.2s;
         }
