@@ -2,7 +2,7 @@
 
 {% block title %}{{ config.title }} - Docs{% endblock title %}
 
-{% block css %}/doc.css{% endblock css %}
+{% block css %}/standard-layout.css{% endblock css %}
 
 {% block content %}
 <div id="content">
@@ -15,7 +15,7 @@
         </div>
     </div>
     <div>
-        <div class="section latest">
+        <div class="section">
             <h2>{{ latest_release_tag }}</h2>
             <p>
                 This is the documentation for the latest release you'll find on
@@ -30,7 +30,7 @@
         </div>
     </div>
     <div>
-        <div class="section master">
+        <div class="section">
             <h2>Living on the Edge?</h2>
             <p>
                 If you know what you're doing and want the documentation for the
