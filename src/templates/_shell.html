@@ -60,35 +60,31 @@
         {% endblock header %}
         {% block content %}{% endblock content %}
         {% block footer %}
-        <footer id="footer">
-            <div id="footer-menu">
+        <div class="master-footer">
+            <div class="nav">
+                <div class="logo">
+                    {{ logo::emblem(size=100, type="white") }}
+                </div>
                 <div>
-                    <div class="footer-title">Project</div>
-                    <br>
+                    <div class="h6">Project</div>
                     <a href="{{ config.extra.github_url_organization }}">GitHub</a>
-                    <br>
                     <a href="{{ config.extra.doc_path }}">Documentation</a>
-                    <br>
                     <a href="/blog">Blog</a>
                 </div>
                 <div>
-                    <div class="footer-title">Community</div>
-                    <br>
+                    <div class="h6">Community</div>
                     <a href="{{ config.extra.discord_invite }}">Discord</a>
-                    <br>
-                    <a href="{{ config.extra.reddit_url }}">Subreddit</a>
-                    <br>
-                    <a href="{{ config.extra.gitter_url }}">Gitter</a>
+                    <a href="{{ config.extra.reddit_url }}">Reddit</a>
+                    <a href="{{ config.extra.forums_url }}">Forums</a>
+                </div>
+                <div>
+                    <div class="h6">Foundation</div>
+                    <a href="/foundation">About</a>
+                    <a href="/donate">Donate</a>
+                    <a href="/branding">Branding</a>
                 </div>
             </div>
-            <br>
-            <div id="footer-disclaimer">
-                This website and the Amethyst logo are licensed under a
-                <a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">
-                    <b>Creative Commons Attribution-ShareAlike 4.0 License</b>
-                </a>
-            </div>
-        </footer>
+        </div>
         {% endblock footer %}
     </div>
 </body>
