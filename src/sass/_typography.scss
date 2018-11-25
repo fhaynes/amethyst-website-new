@@ -30,7 +30,7 @@ body, .body1 {
 
 .body2 {
     font-size: 0.9rem;
-    color: rgba($dark, 0.4);
+    color: rgba($dark, 0.65);
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .subtitle {
@@ -73,7 +73,7 @@ h6, .h6 {
 .subtitle {
     font-size: 1.4rem;
     line-height: 1.4em;
-    color: rgba($dark, 0.4);
+    color: rgba($dark, 0.65);
 }
 
 a {
@@ -82,5 +82,21 @@ a {
     &:hover {
         color: $mid-purple;
         text-decoration: none;
+    }
+}
+
+.dark {
+    color: rgba($light, 0.95);
+
+    .subtitle {
+        color: rgba($light, 0.7);
+    }
+
+    a {
+        color: $bright-purple;
+
+        &:hover {
+            color: $light;
+        }
     }
 }
