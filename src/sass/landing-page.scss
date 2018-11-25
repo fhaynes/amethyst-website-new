@@ -1,4 +1,52 @@
-@import 'main';
+@import 'standard-layout';
+@import 'cards';
+@import 'colors';
+
+#content {
+    &:before {
+        display: none;
+    }
+
+    > div.page-title {
+        padding-top: $header-height + 8rem;
+        @include wine();
+    }
+}
+
+.section.separated {
+    display: flex;
+    align-items: center;
+
+    $spacing: 8rem;
+
+    > *:not(:last-child) {
+        margin-right: $spacing;
+    }
+
+    > div {
+        flex: 0 0 calc(50% - #{$spacing / 2});
+
+        > * {
+            margin-top: 0;
+        }
+    }
+
+    img.card {
+        width: 100%;
+    }
+}
+
+.contributors {
+    position: relative;
+    height: 400px;
+
+    > img {
+        position: absolute;
+        border-radius: 50%;
+        box-shadow: 0 0.5rem 2rem 0 rgba($deep-purple, 0.2);
+    }
+}
+
 // #contribute {
 //     text-decoration: none;
 //     color: $primary-color;
