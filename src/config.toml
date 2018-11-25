@@ -8,7 +8,7 @@ generate_rss = true
 
 [extra]
 author = "Moxinilian (Théo Degioanni), Ellie Fagerberg"
-website_version = "3.0"
+website_version = "4.0"
 doc_path = "/doc"
 github_url = "https://github.com/amethyst/amethyst"
 github_url_organization = "https://github.com/amethyst"
