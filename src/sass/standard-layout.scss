@@ -53,6 +53,57 @@
     }
 }
 
+#content .section.separated {
+    display: flex;
+    align-items: center;
+
+    $spacing: 8rem;
+
+    &.reverse {
+        flex-direction: row-reverse;
+
+        @include mobile() {
+            flex-direction: column;
+        }
+    }
+
+    &:not(.reverse) > :not(:last-child), &.reverse > :not(:first-child) {
+        margin-right: $spacing;
+
+        @include mobile() {
+            margin-right: 0;
+        }
+    }
+
+    > div {
+        flex: 0 0 calc(50% - #{$spacing / 2});
+
+        > * {
+            margin-top: 0;
+        }
+    }
+
+    img.card {
+        width: 100%;
+    }
+
+    @include mobile() {
+        flex-direction: column;
+
+        > div {
+            flex: 0 0;
+
+            > * {
+                margin-top: unset;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
+
 @include mobile() {
     #content > div.page-title {
         text-align: center;
