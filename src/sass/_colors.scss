@@ -41,6 +41,12 @@ $deep-plum: #a84a82;
 $mid-peach: #f27ea2;
 $bright-peach: #ffa6a6; // Dark link
 
+// Status colors
+$information: #79e0e6;
+$success:#89fb89;
+$warning: #ffeca0;
+$error: #e56d94;
+
 // Gradients
 @mixin amethyst($direction: 45deg) {
     background: $deep-purple;

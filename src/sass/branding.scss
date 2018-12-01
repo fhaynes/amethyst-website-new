@@ -94,6 +94,10 @@
     &.alternative-dark { background: $alternative-dark; }
     &.light { background: $light; }
     &.alternative-light { background: $alternative-light; }
+    &.information { background: $information; }
+    &.success { background: $success; }
+    &.warning { background: $warning; }
+    &.error { background: $error; }
 
     span:last-child {
         margin-left: 1rem;
