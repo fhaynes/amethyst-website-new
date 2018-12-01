@@ -18,6 +18,11 @@
         > div {
             max-width: 45rem;
 
+            > svg {
+                max-width: 80%;
+                height: auto;
+            }
+
             > a {
                 font-size: 1.5rem;
                 margin: 2rem 2rem;
@@ -25,9 +30,13 @@
                 text-decoration: none;
                 position: relative;
                 display: inline-block;
-                padding-bottom: 1rem;
+                padding-bottom: 0.75rem;
 
                 $underline-size: 0.25rem;
+
+                @include mobile() {
+                    display: block;
+                }
 
                 &:before {
                     position: absolute;
@@ -36,16 +45,18 @@
                     right: 0;
                     margin: 0 auto;
                     background: white;
+                    opacity: 0.3;
                     content: "";
                     display: block;
                     border-radius: $underline-size / 2;
-                    width: $underline-size;
+                    width: 1.5rem;
                     height: $underline-size;
-                    transition: width 0.2s;
+                    transition: width 0.2s, opacity 0.2s;
                 }
 
                 &:hover:before {
-                    width: 2rem;
+                    width: 90%;
+                    opacity: 1;
                 }
             }
         }
