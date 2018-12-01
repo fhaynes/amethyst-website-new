@@ -4,6 +4,13 @@ html, body {
     margin: 0;
     padding: 0;
     font-size: 16px;
+    height: 100%;
+
+    > div {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 * {
