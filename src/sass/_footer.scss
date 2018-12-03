@@ -18,6 +18,7 @@
     > .nav {
         flex-grow: 1;
         display: flex;
+        justify-content: center;
 
         @include mobile() {
             flex-direction: column-reverse;
