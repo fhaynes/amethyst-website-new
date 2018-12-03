@@ -78,9 +78,10 @@ h6, .h6 {
 
 a {
     color: $deep-purple;
+    text-decoration: none;
 
     &:hover {
-        color: $mid-purple;
+        color: $bright-purple;
         text-decoration: none;
     }
 }

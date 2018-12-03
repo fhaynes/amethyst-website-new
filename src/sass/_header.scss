@@ -3,7 +3,7 @@
 @import 'vendor';
 @import 'responsive';
 
-$header-height: 3rem;
+$header-height: 4rem;
 
 // HACK: Used to fix initial state for the navigation
 @keyframes transition-fix {
@@ -18,7 +18,7 @@ $header-height: 3rem;
     justify-content: center;
     width: 100%;
     height: $header-height;
-    border-bottom: 1px solid rgba($dark, 0.05);
+    border-bottom: 1px solid rgba($dark, 0.1);
     background: rgba($light, 0.95);
     z-index: 10000;
     @include vendor-prefix(user-select, none);
@@ -32,9 +32,40 @@ $header-height: 3rem;
         width: 100%;
         margin: 0 1rem;
 
+        $underline-size: .2rem;
+
         a {
+            height: 100%;
             color: rgba($dark, 0.9);
             text-decoration: none;
+            display: flex;
+            align-items: center;
+
+            &:hover > div:before {
+                width: 2rem;
+                opacity: .5;
+            }
+
+            > div {
+                width: 100%;
+                position: relative;
+
+                &:before {
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    background: $deeper-purple;
+                    opacity: 0.3;
+                    content: "";
+                    display: block;
+                    border-radius: $underline-size / 2;
+                    width: 0;
+                    height: $underline-size;
+                    transition: width 0.15s ease-in-out, opacity 0.15s ease-in-out;
+                }
+            }
         }
 
         >* {
@@ -59,10 +90,11 @@ $header-height: 3rem;
 
         >.hamburger {
             display: none;
-            width: $header-height / 2;
-            height: $header-height / 2;
+            width: $header-height / 2 - .2rem;
+            height: $header-height / 2 - .2rem;
             background-image: url("/assets/hamburger.svg");
             background-size: contain;
+            cursor: pointer;
 
             @include mobile() {
                 display: block;
@@ -70,8 +102,10 @@ $header-height: 3rem;
         }
 
         >nav {
+            height: 100%;
+
             >*:not(:last-child) {
-                margin-right: 1rem;
+                margin-right: 1.5rem;
 
                 @include mobile() {
                     margin-right: 0;
