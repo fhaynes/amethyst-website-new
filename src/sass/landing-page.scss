@@ -22,6 +22,10 @@
                 height: auto;
             }
 
+            > h1 {
+                margin-bottom: -.15em;
+            }
+
             > a {
                 font-size: 1.5rem;
                 margin: 2rem 2rem;
@@ -31,7 +35,7 @@
                 display: inline-block;
                 padding-bottom: 0.75rem;
 
-                $underline-size: 0.25rem;
+                $underline-size: 0.2rem;
 
                 @include mobile() {
                     display: block;
@@ -54,7 +58,7 @@
                 }
 
                 &:hover:before {
-                    width: 4rem;
+                    width: 3rem;
                     opacity: 1;
                 }
             }
