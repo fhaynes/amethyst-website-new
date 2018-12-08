@@ -1,6 +1,7 @@
 @import 'standard-layout';
 @import 'colors';
 @import 'cards';
+@import 'responsive';
 
 .logos {
     > div {
@@ -12,6 +13,11 @@
 
         > span {
             flex: 1 1;
+            padding-right: 4em;
+
+            @include mobile {
+                padding-right: 0;
+            }
 
             a {
                 display: block;
