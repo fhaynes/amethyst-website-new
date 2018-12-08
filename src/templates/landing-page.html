@@ -5,8 +5,6 @@
 
 {% block css %}/landing-page.css{% endblock css %}
 
-{% set wikipedia_ecs = "https://en.wikipedia.org/wiki/Entity%E2%80%93component%E2%80%93system" %}
-
 {% block content %}
 <div id="content">
     <div class="page-title dark">
@@ -14,7 +12,7 @@
             {{ logo::emblem(size=250, type="white") }}
             <h1>The Amethyst Game Engine</h1>
             <span class="subtitle">
-                Unleach your imagination with the most powerful community made, data-driven game engine
+                Data-driven game engine written in Rust
             </span>
             <a href="/doc">Learn</a>
             <a href="/blog">News</a>
@@ -27,11 +25,7 @@
             <div>
                 <h2>High Performance</h2>
                 <p>
-                    Being built entirely on the powerful
-                    <a href="https://en.wikipedia.org/wiki/Entity%E2%80%93component%E2%80%93system">entity component system (ECS)</a>
-                    architecture, Amethyst has performance that will last you through any project no
-                    matter what your plans are. The systems automatically utilize all processing power
-                    available, making sure your game stays performant.
+                    Amethyst uses a rigorous <strong><a target="_blank" href="https://en.wikipedia.org/wiki/Entity%E2%80%93component%E2%80%93system">Entity Component System (ECS)</a></strong> architecture to organize game logic. This abstracts away some of the parallelism work, allowing easier exploitation of multi-threading in games. The ECS is rich in features and very efficient, as it never does any memory locking while remaining entirely thread-safe. 
                 </p>
             </div>
             <div>
@@ -44,9 +38,7 @@
             <div>
                 <h2>Built for 2D and 3D</h2>
                 <p>
-                    No matter if you want to make a 2D or a 3D game, Amethyst has you covered with many
-                    utilities and a fast and modular rendering pipeline that works seamlessly with both
-                    dimmensions.
+                    Amethyst uses gfx-rs to render graphics with OpenGL, and soon Vulkan and Metal. It is meant to be used for 2D and 3D, with various utilities for both types of games. It should be beginner friendly but also allow more advanced uses such as custom render passes and GLSL shaders. 
                 </p>
             </div>
             <div>
@@ -59,37 +51,26 @@
             <div>
                 <h2>A Stable Foundation</h2>
                 <p>
-                    Because Amethyst is made using the
-                    <a href="https://rust-lang.org">Rust programming language</a> it can almost
-                    garantee that your games will never crash or encounter unpleasant bugs.
+                    Thanks to the <a target="_blank" href="https://www.rust-lang.org/">Rust programming language</a>, Amethyst uses all CPU cores to run its internals and logic. A lot of optimizations have yet to be done, but the current status is already showing great potential. 
                 </p>
             </div>
             <div>
-                {# TODO: Replace this image #}
                 <img class="card" src="/assets/rust_example.jpg" alt="Rust Example Code">
             </div>
         </div>
     </div>
     <div>
         <div class="section">
-            <h2>Made by an Open Community</h2>
+            <h2>Free with very permissive usage</h2>
             <p>
-                Amethyst was made by an open and inviting community, having
-                <a href="{{ config.extra.github_url_contributors }}">many different contributors</a>.
-                The engine and other Amethyst projects are freely available with their source code licensed under the <b>MIT license</b> or
-                the <b>Apache 2.0 license</b>.
-                <br>
-                <br>
-                We love new contributors of all types! Check out
-                <a href="/contribute">our contributing page</a> if you want to be a part of making
-                Amethyst become even greater!
+                Amethyst is open source and free software. You can use, read, modify, distribute its source code under the permissive <strong>MIT</strong> and <strong>Apache 2.0 licenses</strong>, and it is important to us that it remains that way. The strength of the community keeps Amethyst going forward, through the contributions of <a target="https://github.com/amethyst/amethyst/graphs/contributors" target="_blank">awesome people</a>. Come visit us on <a href="https://github.com/amethyst/amethyst" target="_blank">GitHub</a>! 
             </p>
         </div>
     </div>
     <div>
         <div class="section center">
             {{ logo::emblem(size=200) }}
-            <h2>Get Started Today</h2>
+            <h2>Get Started</h2>
             <p>
                 You can easily get started using <a href="/book/master">our book guide</a> which
                 goes throgh the basics of creating a game using Amethyst. If you need any help on

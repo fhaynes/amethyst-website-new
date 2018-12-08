@@ -16,8 +16,7 @@
     {% if first_page %}
     <section class="page-title">
         <div>
-            <h1>The Amethyst Blog</h1>
-            <span class="subtitle">News about all things Amethyst</span>
+            <h1>News from Amethyst</h1>
         </div>
     </section>
     <section>
@@ -26,6 +25,7 @@
             {% set page = paginator.pages[0] %}
             <h3>{{ page.title }}</h3>
             <p>{{ page.description }}</p>
+            <p><a href="{{ page.permalink }}">Read more</a></p>
         </div>
     </section>
     {% endif %}
