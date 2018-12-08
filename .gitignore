@@ -16,6 +16,9 @@ mdBook
 # semantic ui
 node_modules
 
+# zola
+src/public
+
 # jekyll
 _site
 .sass-cache
