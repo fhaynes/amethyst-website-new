@@ -2,24 +2,30 @@
 @import 'colors';
 @import 'responsive';
 
+section.articles:first-child {
+    margin-top: 4rem;
+}
+
 .articles {
     a {
         position: relative;
 
-        &:before {
-            position: absolute;
-            content: "";
-            display: block;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            width: 50%;
-            height: 2px;
-            background: $dark;
-            opacity: .2;
+        &:not(:last-child) {
+            &:before {
+                position: absolute;
+                content: "";
+                display: block;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 50%;
+                height: 2px;
+                background: $dark;
+                opacity: .2;
 
-            @include mobile {
-                margin: 0 auto;
+                @include mobile {
+                    margin: 0 auto;
+                }
             }
         }
 
