@@ -9,7 +9,7 @@
 {% set first_page = paginator.current_index == 1 %}
 {% set start_index = 0 %}
 {% if first_page %}
-    {% set start_index = 1 %}
+{% set start_index = 1 %}
 {% endif %}
 
 <main id="content">
@@ -19,18 +19,10 @@
             <h1>News from Amethyst</h1>
         </div>
     </section>
-    <section>
+    <section class="articles">
         <div class="latest">
             <h2>Latest News</h2>
             {% set page = paginator.pages[0] %}
-            <h3>{{ page.title }}</h3>
-            <p>{{ page.description }}</p>
-            <p><a href="{{ page.permalink }}">Read more</a></p>
-        </div>
-    </section>
-    {% endif %}
-    <section class="articles">
-        {% for page in paginator.pages | slice(start=(start_index)) %}
             <a href="{{ page.permalink }}">
                 <article>
                     <div class="date">{{ page.date }}</div>
@@ -38,14 +30,26 @@
                     <p>{{ page.description }}</p>
                 </article>
             </a>
+        </div>
+    </section>
+    {% endif %}
+    <section class="articles">
+        {% for page in paginator.pages | slice(start=(start_index)) %}
+        <a href="{{ page.permalink }}">
+            <article>
+                <div class="date">{{ page.date }}</div>
+                <h3>{{ page.title }}</h3>
+                <p>{{ page.description }}</p>
+            </article>
+        </a>
         {% endfor %}
     </section>
     <section>
         {% if paginator.previous %}
-            <a href="{{ paginator.previous }}">Newer</a>
+        <a href="{{ paginator.previous }}">Newer</a>
         {% endif %}
         {% if paginator.next %}
-            <a href="{{ paginator.next }}">Older</a>
+        <a href="{{ paginator.next }}">Older</a>
         {% endif %}
     </section>
 </main>
